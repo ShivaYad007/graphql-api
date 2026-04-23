@@ -1,0 +1,43 @@
+package com.sky;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.sky.model.Product;
+import com.sky.repo.ProductRepo;
+
+@SpringBootApplication
+public class ProductServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProductServiceApplication.class, args);
+	}
+	
+	private Integer id;
+	private String name;
+	private double cost;
+	private String category;
+	private int stock;
+
+	@Autowired
+	private ProductRepo productRepo;
+	
+	public void initDB() {
+		List<Product> products = Stream.of(
+				new Product("mobile",32000.0, "electronis",20000),
+				new Product("tv",16000.0, "electronis",15000),
+				new Product("waching machine",18000.0, "electronis",12000),
+				new Product("jeans",1200.0, "fashion",30000),
+				new Product("cotton shirt",2000.0, "fashion",3500),
+				new Product("shoes",1100.0, "fashion",4500),
+				new Product("sunscreen",359.0, "beauty",18000))
+				.collect(Collectors.toList());
+	}
+
+}

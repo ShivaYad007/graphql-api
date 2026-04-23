@@ -1,0 +1,5 @@
+package com.sky.model;
+
+public class ProductController {
+
+}

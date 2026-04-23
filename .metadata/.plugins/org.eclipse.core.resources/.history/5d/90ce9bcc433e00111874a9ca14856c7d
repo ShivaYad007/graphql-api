@@ -1,0 +1,18 @@
+package com.sky.model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import lombok.RequiredArgsConstructor;
+
+@RequiredArgsConstructor
+@Entity
+@Table(name="product")
+public class Product {
+	
+private Integer id;
+private String name;
+private double cost;
+private String category;
+private int stock;
+
+}

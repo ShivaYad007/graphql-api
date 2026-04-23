@@ -1,0 +1,14 @@
+type Product{
+	id: ID
+	name: String
+	cost: Float
+	category: String
+	stock: Int
+
+}
+
+	private Integer id;
+	private String name;
+	private double cost;
+	private String category;
+	private int stock;

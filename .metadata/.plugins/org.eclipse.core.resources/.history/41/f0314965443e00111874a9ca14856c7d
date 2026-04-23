@@ -1,0 +1,19 @@
+# Conversion to YAML from Properties formar report
+# Errors:
+# - Direct assignment 'spring=' can not be combined with sub-property assignment 'spring.application...'. Direct assignment is dropped!
+spring:
+  application:
+    name: product-service
+server:
+  port: 8081
+datasource: ''
+url: jdbc:mysql://localhost:3306/graphql_test_db
+username: root
+password: root
+driver-class-name: com.mysql.cj.jdbc.Driver
+jpa: ''
+hibernate: ''
+ddl-auto: 'none   # VERY IMPORTANT (existing tables)'
+show-sql: true
+properties: ''
+format_sql: true
